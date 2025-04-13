@@ -1,0 +1,118 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: #1D503A;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+.login-container {
+background-color: rgba(255, 255, 255, 0.95);
+padding: 40px;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+width: 320px;
+
+}
+
+.login-container h2 {
+text-align: center;
+margin-bottom: 25px;
+color: #1D503A;;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.container {
+display: flex;
+align-items: center; /* Alinha os itens verticalmente ao centro */
+margin-bottom: 30px;
+}
+
+.imagem {
+width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+height: auto;
+margin-right: 20px; /* Espaço entre a imagem e os textos */
+border-radius: 100%;
+
+}
+
+.textos {
+display: flex;
+flex-direction: column; /* Coloca os textos em coluna */
+
+}
+
+.texto1 {
+margin: 1px 0; /* Espaçamento entre os textos */
+font-size: 16px;
+text-align: left;
+}
+
+.texto2 {
+    margin: 1px 0; /* Espaçamento entre os textos */
+    font-size: 20px;
+    text-align: left;
+    color: #1D503A;;
+    
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 6px;
+color: #555;
+}
+
+input[type="date"],
+input[type="time"] {
+width: 100%;
+padding: 10px;
+border: 1px solid #bbb;
+border-radius: 6px;
+}
+
+.login-btn {
+width: 100%;
+padding: 12px;
+background-color: #1D503A;
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+background-color: #09442c;
+
+}
+
+p {
+margin-top: 20px;
+font-size: 12px;
+color: #555;
+text-align: center;
+}
+
+
+
+
+.footer-text {
+margin-top: 20px;
+font-size: 12px;
+color: #555;
+text-align: center;
+}

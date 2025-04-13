@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+  <title>Login - NUTRIAÇÃO</title>
+
+</head>
+<body>
+
+  <div class="login-container">
+    <img class="logo" src="../assets/logo_nutriacao.png" alt="logo">
+    <h2>NUTRIAÇÃO</h2>
+    <form onsubmit="return validarLogin()">
+      <div class="form-group">
+        <input type="text" id="username" placeholder="Digite seu usuário" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Digite sua senha" required>
+      </div>
+      <button type="submit" class="login-btn">Entrar</button>
+      <div id="mensagemErro" class="error"></div>
+      <a href="criar_conta.html"><p>Criar Conta</p></a>
+    </form>
+    <div class="footer-text">© 2025 NUTRIAÇÃO</div>
+  </div>
+
+  <script>
+    function validarLogin() {
+      const usuario = document.getElementById('username').value;
+      const senha = document.getElementById('password').value;
+      const mensagemErro = document.getElementById('mensagemErro');
+
+      if (usuario === "hugo" && senha === "123") {
+        //alert("Login bem-sucedido!");
+        window.location.href = "menu_nutricao.html"; // Redireciona corretamente
+        return false; // previne o envio do formulário
+      }
+      if (usuario === "paciente" && senha === "123") {
+        //alert("Login bem-sucedido!");
+        window.location.href = "menu_paciente.html"; // Redireciona corretamente
+        return false; // previne o envio do formulário
+      
+      }  
+      if (usuario === "admin" && senha === "123") {
+        //alert("Login bem-sucedido!");
+        window.location.href = "menu-admin.html"; // Redireciona corretamente
+        return false; // previne o envio do formulário
+          
+      } else {
+        mensagemErro.textContent = "Usuário ou senha incorretos.";
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
