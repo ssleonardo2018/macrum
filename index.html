@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style_index.css">
+  <title>Nutriação - Transforme sua saúde com tecnologia</title>
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo-container">
+      <img src="assets/logo_nutriacao.png" alt="Logo">
+      <span>Nutriação</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu" id="nav-menu">
+      <a href="#">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#loja">Loja</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>Nutriação</h1>
+    <p>Um novo jeito de cuidar da sua saúde usando a tecnologia ao seu favor.</p>
+    <a href="https://ssleonardo2018.github.io/nutriacao/" target="_blank" class="btn-primary">🚀 Testar Aplicativo Web</a>
+  </header>
+
+  <!-- Sobre a Nutriação -->
+  <section class="section" id="sobre">
+    <h2>🌱 O que é a Nutriação?</h2>
+    <p>A <strong>Nutriação</strong> é uma aplicação web desenvolvida para promover o cuidado com a saúde alimentar de forma personalizada e tecnológica.
+    O sistema permite o controle, a organização e o acompanhamento da alimentação diária de usuários, auxiliando na construção de hábitos saudáveis.</p>
+  </section>
+
+  <!-- Objetivos -->
+  <section class="section" id="objetivos">
+    <h2>🎯 Objetivos da Plataforma</h2>
+    <ul style="list-style-type: disc; padding-left: 1.5rem; text-align: left; max-width: 800px; margin: 1rem auto;">
+      <li>Facilitar o controle nutricional de forma autônoma e acessível.</li>
+      <li>Disponibilizar informações e orientações de saúde alimentar baseadas em dados.</li>
+      <li>Promover a educação nutricional por meio de funcionalidades intuitivas.</li>
+      <li>Estimular a adesão de hábitos saudáveis com recursos interativos.</li>
+    </ul>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="section" id="funcionalidades">
+    <h2>⚙️ Funcionalidades da Nutriação</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>📋 Cadastro de Usuário</h3>
+        <p>Preenchimento de dados básicos e informações de saúde para personalização do app.</p>
+      </div>
+      <div class="benefit">
+        <h3>🍽️ Registro de Refeições</h3>
+        <p>Insira refeições, tipos de alimentos e horários para controle nutricional.</p>
+      </div>
+      <div class="benefit">
+        <h3>📈 Relatórios Nutricionais</h3>
+        <p>Geração de gráficos e relatórios com base nas entradas de dados.</p>
+      </div>
+      <div class="benefit">
+        <h3>📚 Recomendações Inteligentes</h3>
+        <p>Sugestões de melhorias alimentares com base no seu histórico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loja -->
+  <section class="section banner" id="loja">
+    <h2>🌿 Conheça a Loja Nutriação</h2>
+    <p>Produtos naturais e funcionais para potencializar sua jornada de bem-estar.</p>
+    <br>
+    <a href="https://www.lojanutriacao.com.br" target="_blank" class="btn-primary" style="margin-top: 1rem;">🛍️ Acessar Loja</a>
+  </section>
+
+  <!-- Formulário -->
+  <section class="section form-section" id="contato">
+    <h2>📩 Receba novidades e promoções exclusivas</h2>
+    <p>Deixe seu nome, e-mail e WhatsApp e fique por dentro de tudo!</p>
+    <form action="https://formsubmit.co/ssleonardo2018@gmail.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome completo" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="tel" name="whatsapp" placeholder="WhatsApp com DDD" required />
+      <button type="submit" class="btn-primary">Quero Receber!</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    &copy; 2025 Nutriação - Todos os direitos reservados
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
