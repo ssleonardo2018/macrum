@@ -40,7 +40,6 @@ nav {
 
 .menu {
     display: flex;
-    position: fixed;
     gap: 1.25rem;
 }
 
@@ -52,9 +51,6 @@ nav {
 
 .menu a:hover {
     color: #fbd38d;
-}
-.content {
-    padding-top: 50px;
 }
 
 .hamburger {
