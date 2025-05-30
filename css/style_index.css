@@ -185,6 +185,10 @@ h2 {
     border-radius: 100px;
 }
 
+img-qrcode {
+    width: 120px;
+    boder-radius: 10px;
+}
 
 
 .banner {
