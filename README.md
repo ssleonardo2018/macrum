@@ -36,9 +36,13 @@ Com possibilidade de **expansão para clínicas particulares**, o Macrum oferece
 ## 📁 Estrutura do Projeto
 
 macrum/
+
 ├── index.html # Página principal
+
 ├── style.css # Estilo da página
+
 ├── script.js # Script opcional (em breve)
+
 ├── assets/ # Imagens e ícones utilizados
 
 
