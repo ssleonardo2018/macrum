@@ -11,6 +11,11 @@ body {
     line-height: 1.6;
 }
 
+
+.icone-titulo {
+    border-radius: 100px;
+}
+
 nav {
     background-color: #2f855a;
     color: white;
