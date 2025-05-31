@@ -5,9 +5,9 @@
 }
 
 body {
-  background: linear-gradient(135deg, #e7f9ec, #ffffff);
+  background: linear-gradient(135deg, #59C173, #cac279, #ffe600);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1f4d2b;
+  color: #fff;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,17 +18,15 @@ body {
 
 .container {
   max-width: 800px;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 0 25px rgba(0, 128, 0, 0.1);
-  border: 2px solid #cde6d0;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #1f4d2b;
   animation: fadeInDown 1s ease;
 }
 
@@ -41,7 +39,7 @@ p {
 .highlight {
   font-size: 1.3em;
   font-weight: bold;
-  color: #d4aa00; /* amarelo claro dourado */
+  color: #ffe600;
   margin-top: 20px;
 }
 
@@ -49,9 +47,9 @@ p {
   margin-top: 30px;
   font-size: 1.5em;
   font-weight: bold;
-  background: #d4aa00;
-  color: #ffffff;
-  padding: 12px 24px;
+  background: #fff;
+  color: #46220f;
+  padding: 10px 20px;
   border-radius: 8px;
   display: inline-block;
   animation: pulse 1.5s infinite;
