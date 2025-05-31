@@ -5,9 +5,9 @@
 }
 
 body {
-  background: linear-gradient(135deg, #59C173, #a17fe0, #5D26C1);
+  background: linear-gradient(135deg, #e7f9ec, #ffffff);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  color: #1f4d2b;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,15 +18,17 @@ body {
 
 .container {
   max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 25px rgba(0, 128, 0, 0.1);
+  border: 2px solid #cde6d0;
 }
 
 h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
+  color: #1f4d2b;
   animation: fadeInDown 1s ease;
 }
 
@@ -39,7 +41,7 @@ p {
 .highlight {
   font-size: 1.3em;
   font-weight: bold;
-  color: #ffe600;
+  color: #d4aa00; /* amarelo claro dourado */
   margin-top: 20px;
 }
 
@@ -47,9 +49,9 @@ p {
   margin-top: 30px;
   font-size: 1.5em;
   font-weight: bold;
-  background: #fff;
-  color: #5D26C1;
-  padding: 10px 20px;
+  background: #d4aa00;
+  color: #ffffff;
+  padding: 12px 24px;
   border-radius: 8px;
   display: inline-block;
   animation: pulse 1.5s infinite;
