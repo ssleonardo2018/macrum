@@ -207,12 +207,13 @@ img-qrcode {
 }
 
 .form-section {
-    background-color: #faf089;
+    background-color: #fefcbf;
     border: 2px solid #b2f5ea;
     padding: 2rem;
     margin-top: 3rem;
     border-radius: 12px;
     text-align: center;
+    
 }
 
 form {
