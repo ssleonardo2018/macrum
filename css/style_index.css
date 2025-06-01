@@ -17,6 +17,8 @@ body {
 }
 
 nav {
+    position: sticky;
+    top: 0px;
     background-color: #2f855a;
     color: white;
     padding: 1rem 1.5rem;
@@ -44,6 +46,7 @@ nav {
 }
 
 .menu {
+    
     display: flex;
     gap: 1.25rem;
 }
@@ -62,6 +65,7 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .hamburger span {
@@ -69,22 +73,35 @@ nav {
     width: 25px;
     background: white;
     margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 @media (max-width: 768px) {
     .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
     }
 
     .menu.active {
-    display: flex;
+        display: flex;
     }
 
     .hamburger {
-    display: flex;
+        display: flex;
     }
 }
 
@@ -106,37 +123,33 @@ header p {
 }
 
 .btn-primary {
-    background-color: #2f855a;
-    color: white;
+    font-size: 1.25rem;
     
+    background-color: #2f855a;
+    color: #fefcbf;
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 30px;
-    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.3s;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
 }
 
-.btn-primary:hover {
-    background-color: #276749;
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
 }
+
 
 .section {
     max-width: 1000px;
     margin: 3rem auto;
-    padding: 0 1.5rem;
+    padding: 5rem 1.5rem;
     text-align: center;
 }
 
-.section_doacao {
-    background-color: #faf089;
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    padding-botton: 5px;
-    text-align: center;
-}
 
 .benefits {
     display: grid;
@@ -145,21 +158,7 @@ header p {
     margin-top: 2rem;
 }
 
-.section_banner_1 {
-    background-color: #faf089;
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    text-align: center;
-    height: 300px;
-}
 
-.section_banner_2 {
-    display: flex;
-    gap: 7rem;
-    margin-top: 2px;
-    
-}
 
 h2 {
     padding: 20px;
@@ -188,19 +187,15 @@ h2 {
 
 .img-perfil {
     width: 120px;
+    
     border-radius: 100px;
 }
-
-img-qrcode {
-    width: 120px;
-    boder-radius: 10px;
-}
-
 
 .banner {
     background-color: #fefcbf;
     border: 2px solid #faf089;
-    padding: 2rem;
+    padding: 3rem;
+    
     margin-top: 3rem;
     border-radius: 12px;
     
