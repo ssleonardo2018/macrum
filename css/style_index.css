@@ -188,7 +188,7 @@ h2 {
 .img-perfil {
     width: 150px;
     height: 150px;
-    object-fit: container;
+    object-fit: contain;
     border-radius: 100%;
 }
 
