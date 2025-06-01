@@ -187,9 +187,9 @@ h2 {
 
 .img-perfil {
     width: 150px;
-    height: 150px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 100%;
+    border-radius: 10px;
 }
 
 .banner {
