@@ -134,12 +134,15 @@
   <section class="section form-section" id="contato">
     <h2>📩 Receba novidades e promoções exclusivas</h2>
     <p>Deixe seu nome, e-mail e WhatsApp e fique por dentro de tudo!</p>
-    <form action="https://formsubmit.co/nutriacao25@gmail.com" method="POST">
+
+    <form id="leadForm">
       <input type="text" name="nome" placeholder="Seu nome completo" required />
       <input type="email" name="email" placeholder="Seu e-mail" required />
       <input type="tel" name="whatsapp" placeholder="WhatsApp com DDD" required />
       <button type="submit" class="btn-primary">Quero Receber!</button>
     </form>
+
+    <div id="formStatus" style="display:none; margin-top: 10px;"></div>
   </section>
     
     
@@ -154,6 +157,38 @@
   </footer>
 
   <script>
+
+    const form = document.getElementById("leadForm");
+    const statusDiv = document.getElementById("formStatus");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwf1Qgs-8pNTMjy7NCH1YeZSfnH1zIRIOO1UXMEtLs9xSlit8pBW8UKINAQTV578RI/exec"; // Substitua aqui
+
+      fetch(scriptURL, { method: "POST", body: data })
+        .then(response => {
+          statusDiv.style.display = "block";
+          statusDiv.style.color = "green";
+          statusDiv.textContent = "✅ Dados enviados com sucesso! Obrigado 😊";
+
+          form.reset();
+
+          setTimeout(() => {
+            statusDiv.style.display = "none";
+          }, 5000);
+        })
+        .catch(error => {
+          statusDiv.style.display = "block";
+          statusDiv.style.color = "red";
+          statusDiv.textContent = "❌ Ocorreu um erro. Tente novamente mais tarde.";
+
+          setTimeout(() => {
+            statusDiv.style.display = "none";
+          }, 5000);
+        });
+    });
+    
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
       const hamburger = document.getElementById('hamburger');
