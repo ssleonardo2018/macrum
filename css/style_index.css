@@ -189,7 +189,7 @@ h2 {
     width: 150px;
     height: 250px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 100%;
 }
 
 .banner {
