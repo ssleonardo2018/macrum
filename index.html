@@ -16,27 +16,24 @@
       <img src="assets/logo-macrum.jpg" alt="Logo">
       <span>Macrum</span>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
     <div class="menu" id="nav-menu">
-      <a href="#nav-menu">Início</a>
+      <a href="#inicio">Início</a>
       <a href="#sobre">Sobre</a>
       <a href="#funcionalidades">Funcionalidades</a>
       <a href="#loja">Loja</a>
       <a href="#equipe">Equipe</a>
       <a href="#contato">Contato</a>
-      
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header>
+  <header id="inicio">
     <h1>Macrum</h1>
     <p>Um novo jeito de cuidar da sua saúde usando a tecnologia ao seu favor.</p>
     <a href="html/login.html" target="_blank" class="btn-primary">🚀 Testar Aplicativo Web</a>
   </header>
-
   <!-- Sobre a Nutriação -->
   <section class="section" id="sobre">
     <h2>🌱 O que é o Macrum?</h2>
@@ -159,8 +156,23 @@
   <script>
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
+      const hamburger = document.getElementById('hamburger');
       menu.classList.toggle('active');
+      hamburger.classList.toggle('open');
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menu = document.getElementById("nav-menu");
+      const hamburger = document.getElementById("hamburger");
+      const links = menu.querySelectorAll("a");
+
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+          hamburger.classList.remove("open");
+        });
+      });
+    });
   </script>
 
 </body>
