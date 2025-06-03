@@ -160,7 +160,6 @@ header p {
 .section {
     max-width: 1000px;
     margin: 3rem auto;
-    margin-botton: 2rem; /*ACRESCENTADO*/
     padding: 5rem 1.5rem;
     text-align: center;
 }
