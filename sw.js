@@ -1,4 +1,4 @@
-const CACHE_NAME = 'macrum-v9';
+const CACHE_NAME = 'macrum-v10';
 
 const urlsToCache = [
   './',
