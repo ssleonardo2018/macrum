@@ -2,7 +2,7 @@
 
 **Macrum** é uma solução inovadora em **nutrição clínica**, desenvolvida para **agilizar o atendimento nutricional da população**, integrando-se diretamente aos sistemas de **clínicas, hospitais e instituições públicas de saúde**.
 
-🔗 **Acesse a landing page**: [ssleonardo2018.github.io/macrum-beta](https://ssleonardo2018.github.io/macrum-beta/)
+🔗 **Acesse a landing page**: [ssleonardo2018.github.io/macrum](https://ssleonardo2018.github.io/macrum/)
 
 ---
 
