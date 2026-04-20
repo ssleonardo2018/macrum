@@ -1,0 +1,11 @@
+body {
+    font-family: Arial;
+    background: #111827;
+    color: white;
+}
+
+#dados {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+}

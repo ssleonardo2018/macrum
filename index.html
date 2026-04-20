@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macrum - Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- Manifesto para PWA -->
+    <link rel="manifest" href="./manifest.json">
+    
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <header class="login-header">
+            <div class="logo-circle">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+            </div>
+            <h1>MACRUM</h1>
+            <p>SISTEMA DE NUTRIÇÃO</p>
+        </header>
+
+        <form id="loginForm" class="login-form">
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="usuario@servidor.com.br" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-options">
+                <label class="checkbox-container">
+                    <input type="checkbox"> Lembrar de mim
+                </label>
+                <a href="#" class="forgot-link">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" id="btnLogin">ENTRAR NO SISTEMA</button>
+
+            <div class="divider">
+                <span>ou continue com</span>
+            </div>
+
+            <button type="button" class="google-login">
+                <img src="https://developers.google.com/identity/images/g-logo.png">
+                Entrar com Google
+            </button>
+        </form>
+
+        <footer class="login-footer">
+            <p>&copy; 2025 Copyright - <strong>MACRUM</strong></p>
+            
+        </footer>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./js/apiUsuarios.js"></script>
+    <script defer src="./js/login.js"></script>
+</body>
+</html>

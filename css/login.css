@@ -1,0 +1,206 @@
+/* Paleta de Cores Definida */
+:root {
+    --mac-bg: #e5e2e5;
+    --mac-gray: #b7b6b8;
+    --mac-teal-light: #6f898c;
+    --mac-teal: #426165;
+    --mac-dark: #32424e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mac-bg);
+    /* Imagem de fundo opcional com overlay */
+    background: linear-gradient(rgba(50, 66, 78, 0.85), rgba(50, 66, 78, 0.85)), 
+                url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.login-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.login-header {
+    background-color: var(--mac-dark);
+    padding: 40px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--mac-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.login-header p {
+    font-size: 12px;
+    color: var(--mac-gray);
+    margin-top: 5px;
+}
+
+.login-form {
+    padding: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--mac-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--mac-gray);
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--mac-teal);
+    box-shadow: 0 0 5px rgba(66, 97, 101, 0.2);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.forgot-link {
+    color: var(--mac-teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--mac-teal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--mac-dark);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.login-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--mac-bg);
+    font-size: 11px;
+    color: var(--mac-gray);
+}
+
+.login-footer strong {
+    color: var(--mac-teal_light);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 480px) {
+    .login-container {
+        max-width: 100%;
+    }
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 10px;
+    font-size: 12px;
+    color: var(--mac-gray);
+    position: relative;
+    z-index: 1;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--mac-gray);
+    z-index: 0;
+}
+
+/* Google Button */
+.google-login {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #444;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.google-login img {
+    width: 18px;
+}
+
+.google-login:hover {
+    background: #f5f5f5;
+}
