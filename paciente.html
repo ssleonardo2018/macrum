@@ -1,18 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<title>Paciente</title>
-<link rel="stylesheet" href="./css/paciente.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macrum - Área do Paciente</title>
+    <link rel="stylesheet" href="./css/paciente.css">
+    <link rel="stylesheet" href="./css/plan-alimentar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
 
-<h1>Área do Paciente</h1>
-<button onclick="logout()">Sair</button>
+    <div class="sidebar">
+        <div class="logo">MACRUM</div>
+        <div class="nav-item active" id="btn-inicio"><i class="fas fa-home"></i> <span>Início</span></div>
+        <div class="nav-item" id="btn-plano"><i class="fas fa-utensils"></i> <span>Plano Alimentar</span></div>
+        <div class="nav-item" id="btn-evolucao"><i class="fas fa-chart-line"></i> <span>Evolução</span></div>
+        <div class="nav-item" id="btn-chat"><i class="fas fa-comment"></i> <span>Chat com Nutri</span></div>
+        <div class="nav-item" id="btn-sair" style="margin-top: 50px; color: #ef4444;"><i class="fas fa-sign-out-alt"></i> <span>Sair</span></div>
+    </div>
 
-<div id="dados"></div>
+    <div class="main-content">
 
-<script src="./js/apiDados.js"></script>
-<script src="./js/paciente.js"></script>
+        <div id="section-inicio" class="content-section">
+            <div class="header"><h1>Olá, João Silva! 👋</h1></div>
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 20px;">
+                <div class="card"><span>Água Hoje</span><h2>1.8L <small>/ 3L</small></h2></div>
+                <div class="card"><span>Calorias</span><h2>1.240 <small>kcal</small></h2></div>
+                <div class="card"><span>Peso</span><h2>78.5 kg</h2></div>
+            </div>
+            <div class="card">
+                <h3>Próxima Refeição</h3>
+                <div style="background: #2d3a4f; padding: 15px; border-radius: 10px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Almoço: Frango e Arroz Integral</span>
+                    <button style="background: #4ade80; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Concluir</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="section-plano" class="content-section" style="display: none;">
+            <div class="header"><h1>Meu Plano Alimentar 📋</h1></div>
+            <div class="card" style="margin-bottom: 15px;">
+                <span style="color: #4ade80; font-weight: bold;">07:30 - Café da Manhã</span>
+                <h3 style="margin: 10px 0;">Ovos Mexidos e Frutas</h3>
+                <ul style="color: #94a3b8; list-style: none; padding: 0;">
+                    <li>• 3 ovos mexidos (sem óleo)</li>
+                    <li>• 1 fatia de mamão com aveia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="section-evolucao" class="content-section" style="display: none;">
+            <div class="header"><h1>Sua Evolução 📈</h1></div>
+            <div class="stats-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="card">
+                    <h3>Peso Perdido</h3>
+                    <p style="color: #4ade80; font-size: 28px; font-weight: bold;">- 4.2 kg</p>
+                </div>
+                <div class="card">
+                    <h3>Gordura Corporal</h3>
+                    <p style="color: #60a5fa; font-size: 28px; font-weight: bold;">18%</p>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 20px; text-align: center; border: 1px dashed #334155;">
+                <p style="color: #94a3b8; padding: 40px;"><i class="fas fa-chart-area"></i> Gráfico de evolução será carregado aqui</p>
+            </div>
+        </div>
+
+        <div id="section-chat" class="content-section" style="display: none; height: 80vh; flex-direction: column;">
+            <div class="header">
+                <h1>Chat com Nutri 💬</h1>
+                <p style="color: #94a3b8; font-size: 14px;">Online: Dra. Ana Beatriz</p>
+            </div>
+
+            <div class="card" style="flex-grow: 1; display: flex; flex-direction: column; padding: 0; overflow: hidden; background: #1e293b;">
+                <div id="chat-window" style="flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px;">
+                    <div style="align-self: flex-start; background: #334155; color: white; padding: 12px; border-radius: 15px 15px 15px 0; max-width: 70%; font-size: 14px;">
+                        Olá João! Como foi o almoço hoje? Sentiu alguma dificuldade com as porções?
+                    </div>
+                    <div style="align-self: flex-end; background: #4ade80; color: #0f172a; padding: 12px; border-radius: 15px 15px 0 15px; max-width: 70%; font-size: 14px; font-weight: 500;">
+                        Foi bem tranquilo, Dra! Consegui seguir as quantidades certinhas.
+                    </div>
+                </div>
+
+                <div style="padding: 15px; background: #2d3a4f; border-top: 1px solid #334155; display: flex; gap: 10px;">
+                    <input type="text" placeholder="Digite sua dúvida..." style="flex-grow: 1; background: #0f172a; border: 1px solid #334155; color: white; padding: 12px; border-radius: 8px; outline: none;">
+                    <button style="background: #4ade80; border: none; padding: 0 20px; border-radius: 8px; cursor: pointer; color: #0f172a;">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/paciente.js"></script>
 </body>
 </html>
