@@ -47,3 +47,55 @@ window.onclick = function(event) {
     const modal = document.getElementById('modal-container');
     if (event.target == modal) fecharModal();
 }
+
+const usuarios = [
+    { nome: "João Silva", email: "joao@email.com", perfil: "Paciente" },
+    { nome: "Maria Souza", email: "maria@email.com", perfil: "Paciente" },
+    { nome: "Carlos Lima", email: "carlos@email.com", perfil: "Nutricionista" }
+];
+
+function renderizarUsuarios() {
+    const tbody = document.getElementById("lista-usuarios");
+
+    // limpa antes de renderizar
+    tbody.innerHTML = "";
+
+    usuarios.forEach((usuario, index) => {
+        const linha = `
+            <tr>
+                <td>${usuario.nome}</td>
+                <td>${usuario.email}</td>
+                <td>${usuario.perfil}</td>
+                <td>
+                    <button onclick="editarUsuario(${index})">✏️</button>
+                    <button onclick="excluirUsuario(${index})">🗑️</button>
+                </td>
+            </tr>
+        `;
+
+        tbody.innerHTML += linha;
+    });
+}
+
+function excluirUsuario(index) {
+    usuarios.splice(index, 1);
+    renderizarUsuarios();
+}
+
+function editarUsuario(index) {
+    const usuario = usuarios[index];
+    alert("Editar: " + usuario.nome);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderizarUsuarios();
+});
+
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', function () {
+        document.querySelectorAll('.mobile-nav a')
+            .forEach(l => l.classList.remove('active'));
+
+        this.classList.add('active');
+    });
+});
