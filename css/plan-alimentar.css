@@ -1,0 +1,69 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+.meal-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .meal-item {
+        background: var(--card-bg);
+        border: 1px solid #334155;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+    .meal-header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.02);
+        cursor: pointer;
+    }
+
+    .meal-time {
+        color: var(--accent-green);
+        font-weight: bold;
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .meal-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .meal-content {
+        padding: 20px;
+        border-top: 1px solid #334155;
+        background: #162033;
+    }
+
+    .food-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px ridge #334155;
+    }
+
+    .food-item:last-child { border-bottom: none; }
+
+    .substitution-link {
+        color: #60a5fa;
+        font-size: 0.8rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .macro-tag {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: #334155;
+        margin-left: 10px;
+    }
